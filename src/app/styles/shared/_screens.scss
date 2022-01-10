@@ -1,0 +1,22 @@
+.screen-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	width: -moz-available;          /* WebKit-based browsers will ignore this. */
+	width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+	width: fill-available;
+	padding: 20px;
+
+	&.full {
+		height: 100%;
+    height: -moz-available;          /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    height: fill-available;
+	}
+
+	&.content-center {
+		justify-content: center;
+	}
+}

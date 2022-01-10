@@ -8,6 +8,8 @@ const createWindow = () => {
 	const mainWindow = new BrowserWindow({
 		height: 600,
 		width: 1100,
+		minHeight: 500,
+		minWidth: 500,
 		title: "Angular and Electron",
 		webPreferences: {
 			nodeIntegration: true

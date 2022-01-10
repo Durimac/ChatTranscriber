@@ -1,0 +1,4 @@
+<app-file-selection *ngIf="selectedProcess === FileTranscriberProcess.SELECT || selectedProcess === FileTranscriberProcess.RESELECT">
+</app-file-selection>
+
+<app-file-analysing *ngIf="selectedProcess === FileTranscriberProcess.ANALYSE"></app-file-analysing>

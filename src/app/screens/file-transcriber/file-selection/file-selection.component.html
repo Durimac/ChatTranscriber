@@ -1,0 +1,22 @@
+<div class="screen-container full">
+	<div class="file-selector__title">
+		<span>File selection</span>
+		<em class="fontawesome-icon"></em>
+	</div>
+
+	<ngx-dropzone
+		class="file-selector__dropzone-container"
+		(change)="onFileSelected($event)"
+		[multiple]="false"
+	>
+		<ngx-dropzone-label>Drag a file here or click to select one</ngx-dropzone-label>
+
+		<ngx-dropzone-preview
+			*ngFor="let file of selectedFiles"
+			[removable]="true"
+			(removed)="onFileRemoved(file)"
+		>
+			<ngx-dropzone-label>{{ file.name }} ({{ file.type }})</ngx-dropzone-label>
+		</ngx-dropzone-preview>
+	</ngx-dropzone>
+</div>
